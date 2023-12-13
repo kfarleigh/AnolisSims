@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#Comment - to be submitted by: sbatch slurm_job.txt
+#SBATCH --time=96:00:00
+#SBATCH --nodes=1 --ntasks-per-node=12
+#SBATCH --partition=batch
+#SBATCH --mail-type=BEGIN,END
+#SBATCH --mail-user=farleik@miamioh.edu
+#SBATCH --job-name=Anolis_MSprime
+#Comment - batch job setup complete
+cd  /home/farleik/Anolis/MSprime
+sh Run_MSprime_Final.sh /home/farleik/Anolis/MSprime/Reference 20 50
+
